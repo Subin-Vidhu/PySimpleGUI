@@ -14,13 +14,16 @@ thelayout = [
      s.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=25),
      s.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=75),
      s.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=10)],
-    [s.Text('_'  * 80)],
+    [s.Text('_' * 80)],
     [s.Text('Choose A Folder', size=(35, 1))],
     [s.Text('Your Folder', size=(15, 1), auto_size_text=False, justification='right'),
      s.InputText('Default Folder'), s.FolderBrowse()],
     [s.Submit(), s.Cancel()]
-     ]
+]
 
-window = s.Window(title="Example Widgets", size=(640,480), layout=thelayout)
+window = s.Window(title="Example Widgets", size=(640, 480), layout=thelayout)
 button, values = window.read()
 s.popup(button, values)
+
+# diff themes available
+# s.preview_all_look_and_feel_themes()
